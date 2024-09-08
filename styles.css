@@ -2,82 +2,100 @@ body {
     font-family: Arial, sans-serif;
     background-color: #f0f2f5;
     margin: 0;
+    padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
 }
 
-.registro-contenedor {
+.catalogo-contenedor {
     width: 100%;
-    max-width: 400px;
+    max-width: 1200px;
     margin: auto;
     padding: 20px;
     background-color: white;
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
-
-.registro-caja {
     text-align: center;
 }
 
-h2 {
+.catalogo-contenedor h1 {
     color: #7417b3;
     margin-bottom: 20px;
 }
 
-.input-contenedor {
-    margin-bottom: 15px;
-    text-align: left;
+.productos {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
 
-.input-contenedor label {
+.producto-caja {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    padding: 15px;
+    width: 220px;
+    text-align: center;
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+    height: 700px;
+}
+
+.producto-caja:hover {
+    transform: translateY(-5px);
+}
+
+.producto-caja img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.producto-caja h3 {
+    color: #333;
+    margin: 15px 0;
+}
+
+.producto-caja p {
+    color: #666;
+    font-size: 14px;
+}
+
+.producto-caja .precio {
+    font-size: 18px;
     font-weight: bold;
-    color: #4b4f56;
-    display: block;
-    margin-bottom: 5px;
+    color: #7417b3;
+    ;
 }
 
-.input-contenedor input {
-    width: 90%;
-    padding: 10px;
-    font-size: 12px;
-    border-radius: 20px;
-    border: 1px solid #ccd0d5;
-    outline: none;
-}
-
-.boton-registro {
-    width: 90%;
+.boton-comprar {
+    width: 100%;
     background-color: #7417b3;
     color: white;
     font-size: 16px;
     padding: 10px;
     border: none;
-    border-radius: 510px;
+    border-radius: 15px;
     cursor: pointer;
+    margin-top: 10px;
 }
 
-.boton-registro:hover {
-    background-color: #8b1f3f;
+.boton-comprar:hover {
+    background-color: #da284f;
 }
 
-
-@media (max-width: 600px) {
-    .registro-contenedor {
-        padding: 15px;
+@media (max-width: 768px) {
+    .producto-caja {
+        width: 45%;
     }
+}
 
-    h2 {
-        font-size: 24px;
-    }
-
-    .input-contenedor input {
-        padding: 8px;
-    }
-
-    .boton-registro {
-        font-size: 14px;
+@media (max-width: 480px) {
+    .producto-caja {
+        width: 100%;
     }
 }
